@@ -71,8 +71,8 @@ suite("Functional Tests", function () {
 });
 
 const Browser = require("zombie");
-// Browser.site = "https://fcc-mocha.herokuapp.com/";
-Browser.site = "http://127.0.0.1:3000/";
+Browser.site = "https://fcc-mocha.herokuapp.com/";
+// Browser.site = "http://127.0.0.1:3000/";
 
 suite("Functional Tests with Zombie.js", function () {
   this.timeout(5000);
@@ -106,7 +106,7 @@ suite("Functional Tests with Zombie.js", function () {
       browser.fill("surname", "Vespucci").then(() => {
         browser.pressButton("submit", () => {
           browser.assert.success();
-          browser.assert.text("span#name", "Americo");
+          browser.assert.text("span#name", "Amerigo");
           browser.assert.text("span#surname", "Vespucci");
           browser.assert.elements("span#dates", 1);
           done();
